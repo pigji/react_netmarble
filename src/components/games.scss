@@ -216,19 +216,23 @@ section{
     margin: 0 auto;
     .bgImg{
       width: 1050px;
-      height: 390px;
+      height: 400px;
+      overflow: hidden;
       img{
         width: 100%;
         height: 100%;
         border: 1px solid #eee;
         border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
+        transition: transform .3s;
         cursor: pointer;
+        &:hover{
+          transform: scale(1.05);
+        }
       }
     }
     .gameText{
       width: 370px;
-      height: 390px;
+      height: 400px;
       background-color: #1e2023;
       padding: 15px;
       box-sizing: border-box;

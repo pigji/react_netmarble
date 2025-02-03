@@ -18,7 +18,7 @@ const SideBar = () => {
       <header>
         <div class="header_bar">
           <div class="logo">
-            <Link to="home">netmarble</Link>
+            <Link to="/">netmarble</Link>
           </div>
           <div class="login">
             <Link to="/login">
@@ -50,7 +50,7 @@ const SideBar = () => {
             </Link>
             </li>
             <li>
-            <Link to="/">
+            <Link to="/store">
               <IoStorefront /> 넷마블 스토어
             </Link>
             </li>

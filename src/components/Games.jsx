@@ -13,7 +13,7 @@ const Games = () => {
           <div id='mobile'>
             <div className='mobileTop'>
               <h2>Mobile Games</h2>
-              <Link to="">전체보기 <FaArrowRight /></Link>
+              <Link to="/allgames">전체보기 <FaArrowRight /></Link>
             </div>
             <ul className='mobileGames'>
               <li>
