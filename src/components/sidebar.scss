@@ -1,0 +1,65 @@
+/*초기화*/
+*{margin: 0; padding: 0;}
+ul, li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+body{
+  box-sizing: border-box; 
+  min-width: 1200px;
+  font-size: 16px;
+}
+@font-face {
+  font-family: 'netmarbleB';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.1/netmarbleB.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Orbitron:wght@400..900&display=swap');
+
+
+/*-------------------------------------------------------------*/
+header{
+  /* border: 1px solid red;  영역 확인용 */
+  min-height: 800px;
+  width: 240px;
+  height: 100%;
+  position: fixed;  /*위치 고정*/
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 22px 0 40px 0 rgba(49, 52, 132, 0.1); /*그림자 효과*/
+  z-index: 100; /*다른 요소에 가려지지 않게 설정*/
+  
+  .header_bar{
+    padding: 70px 25px;
+    text-align: center;
+    .logo{
+      a{
+        font-size: 34px;
+        color: rgb(88, 23, 23);
+        margin-bottom: 50px;
+        font-family: 'netmarbleB';
+      }
+    }
+    .login{
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      padding: 10px 15px;
+      text-align: left;
+      font-size: 14px;
+      a{
+        color: #333;
+        letter-spacing: 2px;
+      }
+    }
+    .menu{
+      margin-top: 30px;
+      color: #666;
+      text-align: left;
+      padding: 10px 15px;
+      li{
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
