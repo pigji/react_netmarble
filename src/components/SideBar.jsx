@@ -20,7 +20,7 @@ const SideBar = () => {
           <div class="logo">
             <Link to="/">netmarble</Link>
           </div>
-          <div class="login">
+          <div class="join">
             <Link to="/login">
               <LuSquareUserRound /> 로그인
             </Link>

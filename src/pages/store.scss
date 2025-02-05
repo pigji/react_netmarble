@@ -15,7 +15,7 @@
     z-index: 999;
     .logoImg{
       padding: 10px;
-      img{}
+      img{cursor: pointer;}
     }
     .rightMenu{
       display: flex;
@@ -68,8 +68,7 @@
   }
 
   //상품 section영역
-  #new{
-    border: 1px solid red;    //영역 확인용
+  section{
     width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -83,24 +82,28 @@
       font-weight: 500;
 
     }
-    .newBox{
+    .goodsBox{
       ul{
         display: flex;
         justify-content: center;
         li{
           margin: 0 15px;
-          .newImg{
+          .goodsImg{
             position: relative;
+            &:hover .goodsHoverIcon > img{
+              display: block;
+            }
             img{
               width: 100%;
               height: 100%;
               border-radius: 15px;
               cursor: pointer;
             }
-            .newHoverIcon{
+            .goodsHoverIcon{
               display: flex;
               align-items: center;
               justify-content: center;
+              
               img{
                 position: absolute;
                 bottom: 10%;
@@ -110,17 +113,17 @@
                 cursor: pointer;
                 display: none;
                 z-index: 888;
-                &:hover{
-                  display: block;
-                }
               }
-              .hi01{left: 30%;}
-              .hi02{left: 50%;}
+              
+              
+              .hi01{left: 35%;}
+              .hi02{left: 55%;}
             }
           }
-          .newTxt{
+          .goodsTxt{
             padding-left: 5px;
             margin-top: 10px;
+            cursor: pointer;
             p{
               margin-bottom: 5px;
               font-size: 18px;

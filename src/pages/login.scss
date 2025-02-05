@@ -1,29 +1,40 @@
 
-.login{
-  padding-top: 120px;
+#loginPg{
   width: 100%;
-  max-width: 800px;
-  margin: 120px auto 80px;
-  border: 1px solid #ccc;
-  padding: 50px;
-  box-sizing: border-box;
-  h2{
-    text-align: center;
-    border-bottom: 5px double #29aa92;;
-    padding-bottom: 5px;
-  }
-  .loginBox{
-    margin-top: 50px;
-  }
-
-
-  /*체크박스 색상변경*/
-  .ant-checkbox-checked .ant-checkbox-inner {
-    background-color: #29aa92;
-    border-color: #1f8673;
-  }
-  /*버튼 색상변경*/
-  button{
-    background-color: #29aa92;
+  height: 100%;
+  padding-left: 240px;
+  
+  .login{
+    width: 100%;
+    margin: 100px auto 80px;
+    padding: 50px;
+    box-sizing: border-box;
+    .imgTxt{
+      text-align: left;
+      img{
+        width: 50%;
+      }
+      h2{
+        text-align: left;
+        width: 70%;
+        border-bottom: 5px double #ffe208;
+        padding-bottom: 5px;
+        padding-left: 10px;
+      }
+    }
+    .loginBox{
+      margin-top: 50px;
+    }
+  
+  
+    /*체크박스 색상변경*/
+    .ant-checkbox-checked .ant-checkbox-inner {
+      background-color: #3eb0d2;
+      border-color: #3eb0d2;
+    }
+    /*버튼 색상변경*/
+    button{
+      background-color: #3eb0d2;
+    }
   }
 }

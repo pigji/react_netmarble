@@ -1,9 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./storebanner.scss";
 
-//리액트 아이콘
-import { FaAngleLeft } from "react-icons/fa";
-import { FaAngleRight } from "react-icons/fa";
 
 //슬라이드 배열
 const slides = [
@@ -48,52 +45,59 @@ const slides = [
 const StoreBanner = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  //다음 슬라이드로 이동
   const nextSlide = () => {
-    //다음 슬라이드로 이동
     setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
   };
 
+  //이전 슬라이드로 이동
   const prevSlide = () => {
-    //이전 슬라이드로 이동
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + slides.length) % slides.length
     );
   };
 
-  useEffect(() => {
-    //5초마다 자동 전환
-    const interval = setInterval(nextSlide, 5000);
-    return () => clearInterval(interval);
-  }, []);
+  //페이지네이션
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
 
   return (
     <div className="storebanner">
-      <div className="slider-container">
+      <div className="storeSlider-container">
         <div
-          className="slide"
-          style={{ backgroundImage: `url(${slides[currentIndex].image})` }}
+          className="slides"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
-          <div className="text-overlay">
-            <p className="text-xl">{slides[currentIndex].text1}<br/>{slides[currentIndex].text2}</p>
-            <p className="text-sm">{slides[currentIndex].hashtags}</p>
-          </div>
-        </div>
-
-        <button className="nav-button left" onClick={prevSlide}>
-          <FaAngleLeft />
-        </button>
-
-        <button className="nav-button right" onClick={nextSlide}>
-          <FaAngleRight />
-        </button>
-
-        <div className="indicator-container">
-          {slides.map((_, index) => (
-            <button
+          {slides.map((slide, index) => (
+            <div
               key={index}
-              className={`indicator ${index === currentIndex ? "active" : ""}`}
-              onClick={() => setCurrentIndex(index)}
-            />
+              className="slide"
+              style={{ backgroundImage: `url(${slide.image})` }}
+            >
+              <div className="text-overlay">
+                <h3>{slide.text1}</h3>
+                <h3>{slide.text2}</h3>
+                <p>{slide.hashtags}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <button className="nav-button left" onClick={prevSlide}>
+          &lt;
+        </button>
+        <button className="nav-button right" onClick={nextSlide}>
+          &gt;
+        </button>
+
+        {/*페이지네이션 */}
+        <div className="pagination">
+          {slides.map((_, index) => (
+            <span
+              key={index}
+              className={index === currentIndex ? "dot active" : "dot"}
+              onClick={() => goToSlide(index)}
+            ></span>
           ))}
         </div>
       </div>
