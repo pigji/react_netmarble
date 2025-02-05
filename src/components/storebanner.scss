@@ -1,0 +1,86 @@
+.storebanner{
+  width: 100vw;
+  height: 100%;
+
+  //슬라이드 컨테이너
+  .slider-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    .slide{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+
+      //텍스트요소
+      .text-overlay {
+        width: auto;
+        color: white;
+        padding: 16px;
+        text-align: center;
+        border: 1px solid red;    //영역확인용
+        margin-right: 400px;
+        .text-xl{
+          font-weight: bold;
+          font-size: 50px;
+          margin-bottom: 40px;
+        }
+        .text-sm{
+          margin-top: 2px;
+          font-size: 20px;
+        }
+      }
+    }
+    //네비게이션 버튼
+    .nav-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s;
+      &:hover {
+        background: rgba(0, 0, 0, 0.8);
+      }
+    
+      &.left {
+        left: 10px;
+      }
+    
+      &.right {
+        right: 10px;
+      }
+    }
+    .indicator-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      .indicator {
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        background: gray;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background 0.3s;
+      
+        &.active {
+          background: black;
+        }
+      }
+    }
+  }
+}

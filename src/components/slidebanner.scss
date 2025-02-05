@@ -1,7 +1,10 @@
-.SwiperSlide{
-  img{
-    padding-left: 280px;
-    width: 100%;
-    height: 100%;
+.Swiper{
+  .SwiperSlide{
+    img{
+      padding-left: 280px;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
   }
 }

@@ -1,18 +1,19 @@
 .netmarbleStore{
+  width: 100vw;
+  min-width: 1400px;
   nav{
     width: 100%;
     height: 105px;
     padding: 0 50px;
     box-sizing: border-box;
-    border: 1px solid red;    //영역확인용
-    background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 999;
     .logoImg{
-      border: 1px solid black;
       padding: 10px;
       img{}
     }
@@ -51,14 +52,106 @@
       }
     }
   }
-  .Swiper{
-    .SwiperSlide{
-      img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        text-align: center;
+  .slideBox{
+    position: relative;
+    .Swiper{
+      .SwiperSlide{
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          text-align: center;
+          cursor: pointer;
+        }
+      }
+    } 
+  }
+
+  //상품 section영역
+  #new{
+    border: 1px solid red;    //영역 확인용
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 80px;
+    box-sizing: border-box;
+    h2{
+      margin-bottom: 50px;
+      color: #252525;
+      font-size: 30px;
+      font-weight: 500;
+
+    }
+    .newBox{
+      ul{
+        display: flex;
+        justify-content: center;
+        li{
+          margin: 0 15px;
+          .newImg{
+            position: relative;
+            img{
+              width: 100%;
+              height: 100%;
+              border-radius: 15px;
+              cursor: pointer;
+            }
+            .newHoverIcon{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              img{
+                position: absolute;
+                bottom: 10%;
+                width: 40px;
+                height: 40px;
+                margin: 0 5px;
+                cursor: pointer;
+                display: none;
+                z-index: 888;
+                &:hover{
+                  display: block;
+                }
+              }
+              .hi01{left: 30%;}
+              .hi02{left: 50%;}
+            }
+          }
+          .newTxt{
+            padding-left: 5px;
+            margin-top: 10px;
+            p{
+              margin-bottom: 5px;
+              font-size: 18px;
+            }
+            b{
+              color: #333;
+              font-size: 15px;
+            }
+            img{
+              margin-top: 10px;
+              display: block;
+              width: 45px;
+              height: 20px;
+              cursor: pointer;
+            }
+          }
+        }
       }
     }
   }
+  #md{
+    width: 100%;
+    height: 100%;
+    background-color: gainsboro;
+  }
+  #friends{}
+  #kungya{}
+  #knights{}
+  #eventBanner{}
+
+
+  //footer
+  footer{}
 }
